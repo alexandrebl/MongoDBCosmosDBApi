@@ -9,5 +9,6 @@ namespace MongoDBCosmosDBApi.Services.Interfaces
         IQueryable<Product> QueryAll();
 
         Product Query(Guid key);
+        void Insert(Product product);
     }
 }

@@ -30,5 +30,10 @@ namespace MongoDBCosmosDBApi.Reposiory.Base
         {
             return _collectionName.AsQueryable<T>().FirstOrDefault(w => w.Key == key);
         }
+
+        public void Insert(T obj)
+        {
+            _collectionName.InsertOne(obj);
+        }
     }
 }

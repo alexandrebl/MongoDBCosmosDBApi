@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using MongoDBCosmosDBApi.Domain.Entities;
 
 namespace MongoDBCosmosDBApi.Reposiory.Interfaces
 {
@@ -8,5 +9,6 @@ namespace MongoDBCosmosDBApi.Reposiory.Interfaces
         IQueryable<T> QueryAll();
 
         T Query(Guid key);
+        void Insert(T obj);
     }
 }

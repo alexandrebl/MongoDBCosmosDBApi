@@ -1,5 +1,5 @@
-﻿using MongoDBCosmosDBApi.Domain.Interfaces;
-using System;
+﻿using System;
+using MongoDBCosmosDBApi.Domain.Interfaces;
 
 namespace MongoDBCosmosDBApi.Domain.Base
 {

@@ -20,14 +20,14 @@ namespace MongoDbCosmosDbApi
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            LoadMiddlewares(services);
+            LoadMiddlewares(services, Configuration);
         }
 
-        private static void LoadMiddlewares(IServiceCollection services)
+        private static void LoadMiddlewares(IServiceCollection services, IConfiguration configuration)
         {
             services.AddLoggerMiddleware();
             services.AddSwaggerService();
-            services.AddDependencyInjection();
+            services.AddDependencyInjection(configuration);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

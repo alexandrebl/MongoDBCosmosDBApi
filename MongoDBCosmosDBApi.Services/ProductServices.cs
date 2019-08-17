@@ -28,5 +28,10 @@ namespace MongoDBCosmosDBApi.Services
 
             return result;
         }
+
+        public void Insert(Product product)
+        {
+            _productRepository.Insert(product);
+        }
     }
 }
