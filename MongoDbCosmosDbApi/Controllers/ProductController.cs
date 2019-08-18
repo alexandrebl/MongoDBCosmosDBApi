@@ -60,10 +60,9 @@ namespace MongoDbCosmosDbApi.Controllers
         {
             try
             {
-
                 _productServices.Insert(product);
 
-            return Ok();
+                return Ok();
             }
             catch (Exception exception)
             {

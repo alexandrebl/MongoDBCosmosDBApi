@@ -22,6 +22,7 @@ namespace MongoDbCosmosDbApi.Middlewares
             services.AddSingleton<IRepository<Product>>(
                 p => new ProductRepository(connectionFactory, mongoDbSettings.DatabaseName,
                     mongoDbSettings.CollectionName));
+
             services.AddTransient<IProductServices, ProductServices>();
         }
     }
